@@ -1835,6 +1835,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -36821,7 +36828,7 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "btn",
+                      staticClass: "btn btn-info",
                       attrs: {
                         "data-toggle": "modal",
                         "data-target": "#create"
@@ -36838,7 +36845,7 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "btn",
+                      staticClass: "btn btn-danger",
                       on: {
                         click: function($event) {
                           _vm.deleteTask(task)
@@ -36852,7 +36859,20 @@ var render = function() {
             }),
             0
           )
-        ])
+        ]),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btn-success",
+            attrs: {
+              "data-backdrop": "static",
+              "data-toggle": "modal",
+              "data-target": "#create"
+            }
+          },
+          [_vm._v("Añadir Tarea")]
+        )
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "modal fade", attrs: { id: "create" } }, [
@@ -36933,7 +36953,7 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("h4", [_vm._v("Crear")])
+              _c("h4", [_vm._v("Gestionar Tareas")])
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "modal-body" }, [
@@ -36979,7 +36999,7 @@ var render = function() {
                           }
                         }
                       },
-                      [_vm._v("Atrás")]
+                      [_vm._v("Limpiar")]
                     )
                   : _vm._e()
               ])
@@ -37014,10 +37034,14 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-footer" }, [
-      _c("input", {
-        staticClass: "btn btn-primary",
-        attrs: { type: "submit", value: "Guardar" }
-      })
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: { type: "button", "data-dismiss": "modal" }
+        },
+        [_c("span", [_vm._v("Cerrar")])]
+      )
     ])
   }
 ]
@@ -48465,8 +48489,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/ik_2dw3/Escritorio/laravel/CRUD2/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/ik_2dw3/Escritorio/laravel/CRUD2/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/casa/Escritorio/EjecucionApache/Proyectos/CRUD2/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/casa/Escritorio/EjecucionApache/Proyectos/CRUD2/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

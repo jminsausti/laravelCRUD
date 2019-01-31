@@ -19,17 +19,21 @@
                                 <td v-text="task.content"></td>
                                 <td>
                                     <!--Botón modificar, que carga los datos del formulario con la tarea seleccionada-->
-                                    <button class="btn" @click="loadFieldsUpdate(task)" data-toggle="modal" data-target="#create">Modificar</button>
+                                    <button class="btn btn-info" @click="loadFieldsUpdate(task)" data-toggle="modal" data-target="#create">Modificar</button>
                                     <!--Botón que borra la tarea que seleccionemos-->
-                                    <button class="btn" @click="deleteTask(task)">Borrar</button>
+                                    <button class="btn btn-danger" @click="deleteTask(task)">Borrar</button>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                    <!-- Botón que abre la ventana modal, data-backdrop=static es para que la ventana se cierre soloa al pulsar cerrar -->
+                    <button class="btn btn-success" data-backdrop="static" data-toggle="modal" data-target="#create">Añadir Tarea</button>
             </div>
 
 
-            <div class="modal fade" id="create">
+            <!-- Modal -->
+
+            <div  class="modal fade" id="create" >
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -43,7 +47,7 @@
                                 <label>Contenido</label>
                                 <input v-model="content" type="text" class="form-control">
                             </div>
-                            <h4>Crear</h4>
+                            <h4>Gestionar Tareas</h4>
                         </div>
 
                         <div class="modal-body">
@@ -53,11 +57,14 @@
                                 <!-- Botón que modifica la tarea que anteriormente hemos seleccionado, solo se muestra si la variable update es diferente a 0-->
                                 <button v-if="update != 0" @click="updateTasks()" class="btn btn-warning">Actualizar</button>
                                 <!-- Botón que limpia el formulario y inicializa la variable a 0, solo se muestra si la variable update es diferente a 0-->
-                                <button v-if="update != 0" @click="clearFields()" class="btn">Atrás</button>
+                                <button v-if="update != 0" @click="clearFields()" class="btn">Limpiar</button>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" class="btn btn-primary" value="Guardar">
+                            <!-- <input type="submit" class="btn btn-primary" value="Guardar"> -->
+                            <button type="button" class="close" data-dismiss="modal">
+                            <span>Cerrar</span>
+                        </button>
                         </div>
                     </div>
                 </div>
